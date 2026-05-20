@@ -1,0 +1,656 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="ru-ru" xml:lang="ru-ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="ru-ru" http-equiv="content-language"/>
+<meta content="text/css" http-equiv="content-style-type"/>
+<meta content="no" http-equiv="imagetoolbar"/>
+<meta content="document" name="resource-type"/>
+<meta content="global" name="distribution"/>
+<meta content="2002-2006 phpBB Group" name="copyright"/>
+<meta content="" name="keywords"/>
+<meta content="" name="description"/>
+<title>Форум пользователей Visio • Главная страница</title>
+<link href="/rss.php" rel="alternate" title="Форум пользователей Visio" type="application/rss+xml"/>
+<link href="./styles/subsilver2-modded/theme/stylesheet.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+// <![CDATA[
+
+function popup(url, width, height, name)
+{
+	if (!name)
+	{
+		name = '_popup';
+	}
+
+	window.open(url.replace(/&amp;/g, '&'), name, 'height=' + height + ',resizable=yes,scrollbars=yes,width=' + width);
+	return false;
+}
+
+function jumpto()
+{
+	var page = prompt('Введите номер страницы, на которую хотите перейти:', '');
+	var perpage = '';
+	var base_url = '';
+
+	if (page !== null && !isNaN(page) && page > 0)
+	{
+		document.location.href = base_url.replace(/&amp;/g, '&') + '&start=' + ((page - 1) * perpage);
+	}
+}
+
+/**
+* Find a member
+*/
+function find_username(url)
+{
+	popup(url, 760, 570, '_usersearch');
+	return false;
+}
+
+/**
+* Mark/unmark checklist
+* id = ID of parent container, name = name prefix, state = state [true/false]
+*/
+function marklist(id, name, state)
+{
+	var parent = document.getElementById(id);
+	if (!parent)
+	{
+		eval('parent = document.' + id);
+	}
+
+	if (!parent)
+	{
+		return;
+	}
+
+	var rb = parent.getElementsByTagName('input');
+	
+	for (var r = 0; r < rb.length; r++)
+	{
+		if (rb[r].name.substr(0, name.length) == name)
+		{
+			rb[r].checked = state;
+		}
+	}
+}
+
+
+// ]]>
+</script>
+</head>
+<body class="ltr">
+<a name="top"></a>
+<div id="wrapheader">
+<div id="logodesc">
+<table cellspacing="0" width="100%">
+<tr>
+<td><a href="index.php.html"><img alt="" src="./styles/subsilver2-modded/imageset/../.././../images/ranks/visio_getbb_ru/logo.png" title=""/></a></td>
+<td align="center" width="100%"><h1>Форум пользователей Visio</h1><span class="gen">Форум по вопросам применения и программирования в Visio</span></td>
+</tr>
+</table>
+</div>
+<div id="menubar">
+<table cellspacing="0" width="100%">
+<tr>
+<td class="genmed">
+<a href="./ucp.php?mode=login"><img alt="*" height="13" src="./styles/subsilver2-modded/theme/images/icon_mini_login.gif" width="12"/> Вход</a>   <a href="./ucp.php?mode=register"><img alt="*" height="13" src="./styles/subsilver2-modded/theme/images/icon_mini_register.gif" width="12"/> Регистрация</a>
+</td>
+<td align="right" class="genmed">
+ <a href="https://visioport.epizy.com/search.htm"><img alt="*" height="13" src="./styles/subsilver2-modded/theme/images/icon_mini_search.gif" width="12"/> Поиск в Visioport</a>  
+				<a href="gallery_index.php.html" title="Альбомы изображений"><img alt="*" height="13" src="./styles/subsilver2-modded/theme/images/icon_mini_gallery.gif" width="12"/> Альбомы</a>   
+				<a href="./faq.php"><img alt="*" height="13" src="./styles/subsilver2-modded/theme/images/icon_mini_faq.gif" width="12"/> FAQ</a>
+				   <a href="./search.php"><img alt="*" height="13" src="./styles/subsilver2-modded/theme/images/icon_mini_search.gif" width="12"/> Поиск</a> </td>
+</tr>
+</table>
+</div>
+<div id="datebar">
+<table cellspacing="0" width="100%">
+<tr>
+<td class="gensmall"></td>
+<td align="right" class="gensmall">Текущее время: 19 май 2026, 12:17<br/></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="wrapcentre">
+<p class="searchbar">
+<span style="float: left;"><a href="./search.php?search_id=unanswered">Сообщения без ответов</a> | <a href="./search.php?search_id=active_topics">Активные темы</a></span>
+</p>
+<br style="clear: both;"/>
+<table cellpadding="0" cellspacing="1" class="tablebg" style="margin-top: 5px;" width="100%">
+<tr>
+<td class="row1">
+<p class="breadcrumbs"><a href="./portal.php">Портал</a> » <a href="index.php.html">Список форумов</a></p>
+<p class="datetime">Часовой пояс: UTC + 3 часа [ Летнее время ]</p>
+</td>
+</tr>
+</table>
+<br/>
+<table cellspacing="1" class="tablebg" width="100%">
+<tr>
+<td align="right" class="cat" colspan="5"> </td>
+</tr>
+<tr>
+<th colspan="2"> Форум </th>
+<th width="50"> Темы </th>
+<th width="50"> Сообщений </th>
+<th> Последнее сообщение </th>
+</tr>
+<tr>
+<td class="cat" colspan="2"><h4><a href="viewforum.php_f=1.html">Форум пользователей</a></h4></td>
+<td class="catdiv" colspan="3"> </td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read_subforum.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/question.gif"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=29.html">Общие вопросы</a>
+<p class="forumdesc">В данном разделе обсуждаются общие вопросы использования Visio</p>
+<p class="forumdesc"><strong>Подфорум: </strong> <a class="subforum read" href="viewforum.php_f=24.html">Полезные ссылки</a></p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">424</p></td>
+<td align="center" class="row2"><p class="topicdetails">4498</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=29_t=2198.html" title="Выбрасывает при сохранении">Выбрасывает при сохранении</a><a href="viewtopic.php_f=29_p=19570.html#p19570" title="Re: Выбрасывает при сохранении"></a></p>
+<p class="topicdetails">12 фев 2026, 19:48</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=61" style="color: #AA0000;">Surrogate</a> <a href="viewtopic.php_f=29_p=19570.html#p19570"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read_subforum.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/GetStarted.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=3.html">Трафареты и шаблоны</a>
+<p class="forumdesc">Обсуждение вопросов создания трафаретов и шаблонов.<br/>Авторские работы пользователей форума</p>
+<p class="forumdesc"><strong>Подфорум: </strong> <a class="subforum read" href="viewforum.php_f=49.html">Полезные ссылки</a></p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">92</p></td>
+<td align="center" class="row2"><p class="topicdetails">1212</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=3_t=1571.html" title="Схемы соединения волокон ВОЛС (схемы сварки, кросс схемы)">Схемы соединения волокон ...</a><a href="viewtopic.php_f=3_p=19537.html#p19537" title="Re: Схемы соединения волокон ВОЛС (схемы сварки, кросс схемы)"></a></p>
+<p class="topicdetails">06 дек 2025, 19:15</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=61" style="color: #AA0000;">Surrogate</a> <a href="viewtopic.php_f=3_p=19537.html#p19537"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read_subforum.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/visLogo.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=2.html">Версии и варианты поставки Visio</a>
+<p class="forumdesc">Обсуждение отличий различных версий: интерфейс пользователя, комплектация поставки, баги и т.п.</p>
+<p class="forumdesc"><strong>Подфорум: </strong> <a class="subforum read" href="viewforum.php_f=28.html">Публикации официального русскоязычного блога Visio</a></p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">111</p></td>
+<td align="center" class="row2"><p class="topicdetails">1051</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=2_t=657.html" title="Создание пользовательского риббона используя xml в визио 2010">Создание пользовательског...</a><a href="viewtopic.php_f=2_p=19217.html#p19217" title="Re: Создание пользовательского риббона используя xml в визио 201"></a></p>
+<p class="topicdetails">28 окт 2024, 16:37</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=61" style="color: #AA0000;">Surrogate</a> <a href="viewtopic.php_f=2_p=19217.html#p19217"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read_subforum.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/fun.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=18.html">Свободная трибуна</a>
+<p class="forumdesc">На данной ветке форума предлагаю обсуждать вопросы, не связанные непосредственно с Visio и программированием под него</p>
+<p class="forumdesc"><strong>Подфорум: </strong> <a class="subforum read" href="viewforum.php_f=19.html">Флейм</a></p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">66</p></td>
+<td align="center" class="row2"><p class="topicdetails">828</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=18_t=906.html" title="Примочки к визио и не только">Примочки к визио и не только</a><a href="viewtopic.php_f=18_p=19236.html#p19236" title="Re: Примочки к визио и не только"></a></p>
+<p class="topicdetails">03 дек 2024, 15:26</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=100" style="color: #0000FF;">immortal</a> <a href="viewtopic.php_f=18_p=19236.html#p19236"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td class="cat" colspan="2"><h4><a href="viewforum.php_f=4.html">Форум разработчиков</a></h4></td>
+<td class="catdiv" colspan="3"> </td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read_subforum.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/coding.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=6.html">Программирование</a>
+<p class="forumdesc">Обмен опытом и обсуждения по применению языков программирования для решения задач автоматизации в визио</p>
+<p class="forumdesc"><strong>Подфорум: </strong> <a class="subforum read" href="viewforum.php_f=22.html">Полезные ссылки</a></p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">501</p></td>
+<td align="center" class="row2"><p class="topicdetails">5945</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=6_t=2105.html" title="Программное добавление в группу">Программное добавление в ...</a><a href="viewtopic.php_f=6_p=19441.html#p19441" title="Re: Программное добавление в группу"></a></p>
+<p class="topicdetails">30 июн 2025, 22:36</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=881" style="color: #0000FF;">gtfox</a> <a href="viewtopic.php_f=6_p=19441.html#p19441"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read_subforum.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/ShapeSheet.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=5.html">ShapeSheet</a>
+<p class="forumdesc">Обсуждение и обмен опытом использования ShapeSheet™ для решения задач автоматизации в визио</p>
+<p class="forumdesc"><strong>Подфорум: </strong> <a class="subforum read" href="viewforum.php_f=21.html">Полезные ссылки</a></p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">188</p></td>
+<td align="center" class="row2"><p class="topicdetails">2242</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=5_t=2117.html" title="присвоить данные для всех фигур по условию">присвоить данные для всех...</a><a href="viewtopic.php_f=5_p=19477.html#p19477" title="Re: присвоить данные для всех фигур по условию"></a></p>
+<p class="topicdetails">25 авг 2025, 19:47</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=881" style="color: #0000FF;">gtfox</a> <a href="viewtopic.php_f=5_p=19477.html#p19477"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/sklad.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=15.html">Склад полезных макросов</a>
+<p class="forumdesc">Макросы и надстройки (add-ins) пользователей Форума.<br/>При добавлении макросов очень желательно комментировать каждую строку кода!!!</p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">45</p></td>
+<td align="center" class="row2"><p class="topicdetails">462</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=15_t=683.html" title="Таблицы в Visio">Таблицы в Visio</a><a href="viewtopic.php_f=15_p=19009.html#p19009" title="Re: Таблицы в Visio"></a></p>
+<p class="topicdetails">16 мар 2024, 09:03</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=397" style="color: #0000FF;">Shishok</a> <a href="viewtopic.php_f=15_p=19009.html#p19009"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td class="cat" colspan="2"><h4>Форум</h4></td>
+<td class="catdiv" colspan="3"> </td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/works.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=30.html">Работы участников форума</a>
+<p class="forumdesc">В том числе коммерческие. Здесь можно дать ссылку, описание, рекламу своих трафаретов, утилит, макросов и прочих решений для Visio.</p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">17</p></td>
+<td align="center" class="row2"><p class="topicdetails">134</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=30_t=1967.html" title="Visio Web Tools - теперь без сервера">Visio Web Tools - теперь ...</a><a href="viewtopic.php_f=30_p=18842.html#p18842" title="Re: Visio Web Tools - теперь без сервера"></a></p>
+<p class="topicdetails">26 окт 2023, 13:18</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=272" style="color: #0000FF;">nbelyh</a> <a href="viewtopic.php_f=30_p=18842.html#p18842"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td class="cat" colspan="2"><h4><a href="viewforum.php_f=32.html">Работа</a></h4></td>
+<td class="catdiv" colspan="3"> </td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/developer.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=33.html">Исполнители</a>
+<p class="forumdesc">Раздел с анкетами пользователей, желающих выполнять сдельные работы в Visio</p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">4</p></td>
+<td align="center" class="row2"><p class="topicdetails">4</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=33_t=1488.html" title="Surrogate больше не подписывается на работы в Visio!!!">Surrogate больше не подпи...</a><a href="viewtopic.php_f=33_p=13904.html#p13904" title="Surrogate больше не подписывается на работы в Visio!!!"></a></p>
+<p class="topicdetails">28 авг 2019, 10:07</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=61" style="color: #AA0000;">Surrogate</a> <a href="viewtopic.php_f=33_p=13904.html#p13904"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/book.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=34.html">Заказы</a>
+<p class="forumdesc">Раздел для размещение заявок на выполнение работ в Visio</p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">5</p></td>
+<td align="center" class="row2"><p class="topicdetails">20</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=34_t=2123.html" title="Ищу специалиста Visio записать макрос">Ищу специалиста Visio зап...</a><a href="viewtopic.php_f=34_p=19468.html#p19468" title="Re: Ищу специалиста Visio записать макрос"></a></p>
+<p class="topicdetails">07 авг 2025, 18:10</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=61" style="color: #AA0000;">Surrogate</a> <a href="viewtopic.php_f=34_p=19468.html#p19468"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td class="cat" colspan="2"><h4><a href="viewforum.php_f=7.html">О форуме</a></h4></td>
+<td class="catdiv" colspan="3"> </td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/tribune.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=10.html">Предложения и обсуждения</a>
+<p class="forumdesc">Обсуждение вопросов о форме и содержании форума</p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">19</p></td>
+<td align="center" class="row2"><p class="topicdetails">508</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=10_t=1028.html" title="Нужен ли данному форуму собственный jabber-чат ?">Нужен ли данному форуму с...</a><a href="viewtopic.php_f=10_p=17643.html#p17643" title="Re: Нужен ли данному форуму собственный jabber-чат ?"></a></p>
+<p class="topicdetails">12 янв 2023, 14:36</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=61" style="color: #AA0000;">Surrogate</a> <a href="viewtopic.php_f=10_p=17643.html#p17643"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/exclaim.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=9.html">Объявления и указания</a>
+<p class="forumdesc">Трибуна администрации <img alt=":)" src="./images/smilies/icon_e_smile.gif" title="Улыбается"/></p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">22</p></td>
+<td align="center" class="row2"><p class="topicdetails">222</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=9_t=162.html" title="первая тысяча">первая тысяча</a><a href="viewtopic.php_f=9_p=18758.html#p18758" title="Re: первая тысяча"></a></p>
+<p class="topicdetails">27 сен 2023, 12:30</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=61" style="color: #AA0000;">Surrogate</a> <a href="viewtopic.php_f=9_p=18758.html#p18758"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td class="cat" colspan="2"><h4><a href="viewforum.php_f=25.html">Коллективная работа</a></h4></td>
+<td class="catdiv" colspan="3"> </td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/ASUTP.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=44.html">АСУТП</a>
+<p class="forumdesc">В данном подфоруме обсуждаются вопросы автоматизации создания рабочего проекта, раздел АК (Автоматизация комплексная)</p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">5</p></td>
+<td align="center" class="row2"><p class="topicdetails">121</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=44_t=1491.html" title="САПР-АСУ :: Проектирование АСУ (КИПиА, Инженерные системы)">САПР-АСУ :: Проектировани...</a><a href="viewtopic.php_f=44_p=19332.html#p19332" title="Re: САПР-АСУ :: Проектирование АСУ (КИПиА, Инженерные системы)"></a></p>
+<p class="topicdetails">10 мар 2025, 16:29</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=881" style="color: #0000FF;">gtfox</a> <a href="viewtopic.php_f=44_p=19332.html#p19332"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/_APT.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=42.html">Инженерные системы</a>
+<p class="forumdesc">Попытка создать инструментарий для автоматизации процесса создания документации инженерных систем</p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">9</p></td>
+<td align="center" class="row2"><p class="topicdetails">136</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=42_t=1970.html" title="Проектирование в Visio-Excel. 7.1 Пример проекта и трафареты">Проектирование в Visio-Ex...</a><a href="viewtopic.php_f=42_p=19240.html#p19240" title="Re: Проектирование в Visio-Excel. 7.1 Пример проекта и трафареты"></a></p>
+<p class="topicdetails">04 дек 2024, 12:06</p>
+<p class="topicdetails"><a href="./memberlist.php?mode=viewprofile&amp;u=841">Виктор-АПТ</a> <a href="viewtopic.php_f=42_p=19240.html#p19240"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/electro.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=26.html">Схема электрощита</a>
+<p class="forumdesc"></p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">9</p></td>
+<td align="center" class="row2"><p class="topicdetails">128</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=26_t=363.html" title="Уточнения по постановке задачи">Уточнения по постановке задачи</a><a href="viewtopic.php_f=26_p=13625.html#p13625" title="Re: Уточнения по постановке задачи"></a></p>
+<p class="topicdetails">01 июн 2019, 02:04</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=272" style="color: #0000FF;">nbelyh</a> <a href="viewtopic.php_f=26_p=13625.html#p13625"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/unmanaged24.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=50.html">Надстройка "Хранилище макросов"</a>
+<p class="forumdesc"></p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">2</p></td>
+<td align="center" class="row2"><p class="topicdetails">39</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=50_t=1625.html" title="Обсуждение">Обсуждение</a><a href="viewtopic.php_f=50_p=16271.html#p16271" title="Re: Обсуждение"></a></p>
+<p class="topicdetails">24 окт 2021, 12:37</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=61" style="color: #AA0000;">Surrogate</a> <a href="viewtopic.php_f=50_p=16271.html#p16271"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/immortal.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=52.html">Комплект проектной/рабочей документации</a>
+<p class="forumdesc">Данный подраздел предназначен для создания комплекта проектной или рабочей документации по электроснабжению (в будущем отоплению, вентиляции, канализации и т.п.)</p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">5</p></td>
+<td align="center" class="row2"><p class="topicdetails">110</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=52_t=1760.html" title="Вопросы оформления документации">Вопросы оформления докуме...</a><a href="viewtopic.php_f=52_p=18841.html#p18841" title="Re: Вопросы оформления документации"></a></p>
+<p class="topicdetails">25 окт 2023, 14:39</p>
+<p class="topicdetails"><a href="./memberlist.php?mode=viewprofile&amp;u=991">Nik035</a> <a href="viewtopic.php_f=52_p=18841.html#p18841"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td class="cat" colspan="2"><h4><a href="viewforum.php_f=38.html">База знаний</a></h4></td>
+<td class="catdiv" colspan="3"> </td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/stats_replies.gif"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=39.html">Документация</a>
+<p class="forumdesc"></p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">5</p></td>
+<td align="center" class="row2"><p class="topicdetails">12</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=39_t=1830.html" title="База знаний ShapeSheet™">База знаний ShapeSheet™</a><a href="viewtopic.php_f=39_p=17241.html#p17241" title="Re: База знаний ShapeSheet™"></a></p>
+<p class="topicdetails">18 авг 2022, 11:00</p>
+<p class="topicdetails"><a href="./memberlist.php?mode=viewprofile&amp;u=841">Виктор-АПТ</a> <a href="viewtopic.php_f=39_p=17241.html#p17241"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/icon_delete.gif"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=40.html">Типичные проблемы</a>
+<p class="forumdesc"></p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">22</p></td>
+<td align="center" class="row2"><p class="topicdetails">253</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=40_t=2008.html" title="При запуске visio 2016 запускается установщик windows и Plus">При запуске visio 2016 за...</a><a href="viewtopic.php_f=40_p=19083.html#p19083" title="Re: При запуске visio 2016 запускается установщик windows и Plus"></a></p>
+<p class="topicdetails">12 авг 2024, 15:51</p>
+<p class="topicdetails"><a href="./memberlist.php?mode=viewprofile&amp;u=466">BPM</a> <a href="viewtopic.php_f=40_p=19083.html#p19083"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/icon_edit.gif"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=41.html">Установка и настройка</a>
+<p class="forumdesc"></p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">3</p></td>
+<td align="center" class="row2"><p class="topicdetails">8</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=41_t=1761.html" title="Визио 2019 отключить вход в учетную запись микрософт">Визио 2019 отключить вход...</a><a href="viewtopic.php_f=41_p=16640.html#p16640" title="Re: Визио 2019 отключить вход в учетную запись микрософт"></a></p>
+<p class="topicdetails">08 янв 2022, 00:58</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=100" style="color: #0000FF;">immortal</a> <a href="viewtopic.php_f=41_p=16640.html#p16640"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td class="cat" colspan="2"><h4><a href="viewforum.php_f=53.html">VisioPort</a></h4></td>
+<td class="catdiv" colspan="3"> </td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/Navigator.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=54.html">Visio Navigator</a>
+<p class="forumdesc">Обратная связь к Visio Navigator</p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">3</p></td>
+<td align="center" class="row2"><p class="topicdetails">29</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=54_t=1943.html" title="Visio ZettelKasten vs Visio Navigator">Visio ZettelKasten vs Vis...</a><a href="viewtopic.php_f=54_p=18965.html#p18965" title="Re: Visio ZettelKasten vs Visio Navigator"></a></p>
+<p class="topicdetails">16 фев 2024, 10:47</p>
+<p class="topicdetails"><a href="./memberlist.php?mode=viewprofile&amp;u=466">BPM</a> <a href="viewtopic.php_f=54_p=18965.html#p18965"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/vp.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=55.html">Прочее к VisioPort</a>
+<p class="forumdesc"></p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">1</p></td>
+<td align="center" class="row2"><p class="topicdetails">23</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=55_t=1905.html" title="Visioport.ru больше не доступен">Visioport.ru больше не до...</a><a href="viewtopic.php_f=55_p=18962.html#p18962" title="Re: Visioport.ru больше не доступен"></a></p>
+<p class="topicdetails">05 фев 2024, 16:17</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=61" style="color: #AA0000;">Surrogate</a> <a href="viewtopic.php_f=55_p=18962.html#p18962"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/gumroad.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=56.html">Перенесено из Gumroad</a>
+<p class="forumdesc">Обратная связь для разработок, ранее продававшихся на Gumroad</p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">5</p></td>
+<td align="center" class="row2"><p class="topicdetails">7</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=56_t=1896.html" title="Ссылки на сторонних ресурсах">Ссылки на сторонних ресурсах</a><a href="viewtopic.php_f=56_p=17925.html#p17925" title="Re: Ссылки на сторонних ресурсах"></a></p>
+<p class="topicdetails">08 фев 2023, 16:15</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=272" style="color: #0000FF;">nbelyh</a> <a href="viewtopic.php_f=56_p=17925.html#p17925"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+</table>
+<span class="gensmall"><a href="./ucp.php?mode=delete_cookies">Удалить cookies конференции</a> | <a href="./memberlist.php?mode=leaders">Наша команда</a></span><br/>
+<br clear="all"/>
+<table cellpadding="0" cellspacing="1" class="tablebg" style="margin-top: 5px;" width="100%">
+<tr>
+<td class="row1">
+<p class="breadcrumbs"><a href="./portal.php">Портал</a> » <a href="index.php.html">Список форумов</a></p>
+<p class="datetime">Часовой пояс: UTC + 3 часа [ Летнее время ]</p>
+</td>
+</tr>
+</table> <br clear="all"/>
+<table cellspacing="1" class="tablebg" width="100%">
+<tr>
+<td class="cat" colspan="2"><h4>Кто сейчас на конференции</h4></td>
+</tr>
+<tr>
+<td align="center" class="row1" rowspan="2" valign="middle"><img alt="Кто сейчас на конференции" src="./styles/subsilver2-modded/theme/images/whosonline.gif"/></td>
+<td class="row1" width="100%"><span class="genmed">Сейчас посетителей на конференции: <strong>22</strong>, из них зарегистрированных: 0, скрытых: 0 и гостей: 22 (основано на активности пользователей за последние 5 минут)<br/>Больше всего посетителей (<strong>4925</strong>) здесь было 10 окт 2025, 14:44<br/><br/>Зарегистрированные пользователи: нет зарегистрированных пользователей</span></td>
+</tr>
+<tr>
+<td class="row1"><b class="gensmall">Легенда :: <a href="./memberlist.php?mode=group&amp;g=5" style="color:#AA0000">Администраторы</a>, <a href="./memberlist.php?mode=group&amp;g=1" style="color:#000001">Гости</a>, <a href="./memberlist.php?mode=group&amp;g=2">Зарегистрированные пользователи</a>, <a href="./memberlist.php?mode=group&amp;g=7" style="color:#0000FF">Знатоки</a></b></td>
+</tr>
+</table>
+<br clear="all"/>
+<table cellspacing="1" class="tablebg" width="100%">
+<tr>
+<td class="cat" colspan="2"><h4>Кто сегодня был на конференции</h4></td>
+</tr>
+<tr>
+<td align="center" class="row1" valign="middle"><img alt="Кто сейчас на конференции" src="./styles/subsilver2-modded/theme/images/whosonline.gif"/></td>
+<td class="row1" width="100%"><span class="genmed">Сегодня на конференции было посетителей: <strong>1852</strong>, из них зарегистрированных: 0,   скрытых: 0 и  гостей: 1852 (основано на сегодняшней активности посетителей)<br/><br/>Зарегистрированные пользователи: нет зарегистрированных пользователей</span></td>
+</tr>
+</table>
+<br clear="all"/>
+<table cellspacing="1" class="tablebg" width="100%">
+<tr>
+<td class="cat" colspan="2"><h4>Статистика</h4></td>
+</tr>
+<tr>
+<td class="row1"><img alt="Статистика" src="./styles/subsilver2-modded/theme/images/whosonline.gif"/></td>
+<td class="row1" valign="middle" width="100%"><p class="genmed">Всего сообщений: <strong>18166</strong> | Тем: <strong>1576</strong> | Пользователей: <strong>1043</strong> | Новый пользователь: <strong><a href="./memberlist.php?mode=viewprofile&amp;u=2027">The1</a></strong></p>
+</td>
+</tr>
+</table>
+<br clear="all"/>
+<form action="./ucp.php?mode=login" method="post">
+<table cellspacing="1" class="tablebg" width="100%">
+<tr>
+<td class="cat"><h4><a href="./ucp.php?mode=login">Вход</a></h4></td>
+</tr>
+<tr>
+<td align="center" class="row1"><span class="genmed">Имя пользователя:</span> <input class="post" name="username" size="10" type="text"/>  <span class="genmed">Пароль:</span> <input class="post" name="password" size="10" type="password"/>   <span class="gensmall">Автоматически входить при каждом посещении</span> <input class="radio" name="autologin" type="checkbox"/>  <input class="btnmain" name="login" type="submit" value="Вход"/></td>
+</tr>
+</table>
+</form>
+<br clear="all"/>
+<table class="legend">
+<tr>
+<td align="center" width="20"><img alt="Новые сообщения" height="25" src="./styles/subsilver2-modded/imageset/forum_unread.gif" title="Новые сообщения" width="46"/></td>
+<td><span class="gensmall">Новые сообщения</span></td>
+<td>  </td>
+<td align="center" width="20"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read.gif" title="Нет новых сообщений" width="46"/></td>
+<td><span class="gensmall">Нет новых сообщений</span></td>
+<td>  </td>
+<td align="center" width="20"><img alt="Нет новых сообщений [ Тема закрыта ]" height="25" src="./styles/subsilver2-modded/imageset/forum_read_locked.gif" title="Нет новых сообщений [ Тема закрыта ]" width="46"/></td>
+<td><span class="gensmall">Форум закрыт</span></td>
+</tr>
+</table>
+<br/>
+<!-- Yandex.RTB R-A-1239576-1 -->
+<div id="yandex_rtb_R-A-1239576-1" style="display: table;margin-right:auto;margin-left:auto;"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-1239576-1",
+                renderTo: "yandex_rtb_R-A-1239576-1",
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script></div>
+<!--
+	We request you retain the full copyright notice below including the link to www.phpbb.com.
+	This not only gives respect to the large amount of time given freely by the developers
+	but also helps build interest, traffic and use of phpBB3. If you (honestly) cannot retain
+	the full copyright we ask you at least leave in place the "Powered by phpBB" line, with
+	"phpBB" linked to www.phpbb.com. If you refuse to include even this then support on our
+	forums may be affected.
+
+	The phpBB Group : 2006
+//-->
+<div id="wrapfooter">
+<span class="copyright">Powered by <a href="http://www.phpbb.com/">phpBB</a> © 2000, 2002, 2005, 2007 phpBB Group
+	<br/>Вы можете <a href="http://getbb.ru/">создать форум бесплатно</a> PHPBB3 на Getbb.Ru, Также возможно <a href="http://mybb2.ru/">сделать готовый форум</a> PHPBB2 на Mybb2.ru <br/><a href="http://www.phpbbguru.net/">Русская поддержка phpBB</a></span>
+</div>
+<!--LiveInternet counter--><script type="text/javascript"><!--
+new Image().src = "http://counter.yadro.ru/hit;getbb?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random();//--></script><!--/LiveInternet--></body>
+</html>

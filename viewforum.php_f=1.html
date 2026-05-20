@@ -1,0 +1,323 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="ru-ru" xml:lang="ru-ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="ru-ru" http-equiv="content-language"/>
+<meta content="text/css" http-equiv="content-style-type"/>
+<meta content="no" http-equiv="imagetoolbar"/>
+<meta content="document" name="resource-type"/>
+<meta content="global" name="distribution"/>
+<meta content="2002-2006 phpBB Group" name="copyright"/>
+<meta content="" name="keywords"/>
+<meta content="" name="description"/>
+<title>Форум пользователей Visio • Просмотр форума - Форум пользователей</title>
+<link href="/rss.php" rel="alternate" title="Форум пользователей Visio" type="application/rss+xml"/>
+<link href="./styles/subsilver2-modded/theme/stylesheet.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+// <![CDATA[
+
+function popup(url, width, height, name)
+{
+	if (!name)
+	{
+		name = '_popup';
+	}
+
+	window.open(url.replace(/&amp;/g, '&'), name, 'height=' + height + ',resizable=yes,scrollbars=yes,width=' + width);
+	return false;
+}
+
+function jumpto()
+{
+	var page = prompt('Введите номер страницы, на которую хотите перейти:', '');
+	var perpage = '';
+	var base_url = '';
+
+	if (page !== null && !isNaN(page) && page > 0)
+	{
+		document.location.href = base_url.replace(/&amp;/g, '&') + '&start=' + ((page - 1) * perpage);
+	}
+}
+
+/**
+* Find a member
+*/
+function find_username(url)
+{
+	popup(url, 760, 570, '_usersearch');
+	return false;
+}
+
+/**
+* Mark/unmark checklist
+* id = ID of parent container, name = name prefix, state = state [true/false]
+*/
+function marklist(id, name, state)
+{
+	var parent = document.getElementById(id);
+	if (!parent)
+	{
+		eval('parent = document.' + id);
+	}
+
+	if (!parent)
+	{
+		return;
+	}
+
+	var rb = parent.getElementsByTagName('input');
+	
+	for (var r = 0; r < rb.length; r++)
+	{
+		if (rb[r].name.substr(0, name.length) == name)
+		{
+			rb[r].checked = state;
+		}
+	}
+}
+
+
+// ]]>
+</script>
+</head>
+<body class="ltr">
+<a name="top"></a>
+<div id="wrapheader">
+<div id="logodesc">
+<table cellspacing="0" width="100%">
+<tr>
+<td><a href="index.php.html"><img alt="" src="./styles/subsilver2-modded/imageset/../.././../images/ranks/visio_getbb_ru/logo.png" title=""/></a></td>
+<td align="center" width="100%"><h1>Форум пользователей Visio</h1><span class="gen">Форум по вопросам применения и программирования в Visio</span></td>
+</tr>
+</table>
+</div>
+<div id="menubar">
+<table cellspacing="0" width="100%">
+<tr>
+<td class="genmed">
+<a href="./ucp.php?mode=login"><img alt="*" height="13" src="./styles/subsilver2-modded/theme/images/icon_mini_login.gif" width="12"/> Вход</a>   <a href="./ucp.php?mode=register"><img alt="*" height="13" src="./styles/subsilver2-modded/theme/images/icon_mini_register.gif" width="12"/> Регистрация</a>
+</td>
+<td align="right" class="genmed">
+ <a href="https://visioport.epizy.com/search.htm"><img alt="*" height="13" src="./styles/subsilver2-modded/theme/images/icon_mini_search.gif" width="12"/> Поиск в Visioport</a>  
+				<a href="gallery_index.php.html" title="Альбомы изображений"><img alt="*" height="13" src="./styles/subsilver2-modded/theme/images/icon_mini_gallery.gif" width="12"/> Альбомы</a>   
+				<a href="./faq.php"><img alt="*" height="13" src="./styles/subsilver2-modded/theme/images/icon_mini_faq.gif" width="12"/> FAQ</a>
+				   <a href="./search.php"><img alt="*" height="13" src="./styles/subsilver2-modded/theme/images/icon_mini_search.gif" width="12"/> Поиск</a> </td>
+</tr>
+</table>
+</div>
+<div id="datebar">
+<table cellspacing="0" width="100%">
+<tr>
+<td class="gensmall"></td>
+<td align="right" class="gensmall">Текущее время: 19 май 2026, 12:34<br/></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="wrapcentre">
+<p class="searchbar">
+<span style="float: left;"><a href="./search.php?search_id=unanswered">Сообщения без ответов</a> | <a href="./search.php?search_id=active_topics">Активные темы</a></span>
+</p>
+<br style="clear: both;"/>
+<table cellpadding="0" cellspacing="1" class="tablebg" style="margin-top: 5px;" width="100%">
+<tr>
+<td class="row1">
+<p class="breadcrumbs"><a href="./portal.php">Портал</a> » <a href="index.php.html">Список форумов</a> » <a href="viewforum.php_f=1.html">Форум пользователей</a></p>
+<p class="datetime">Часовой пояс: UTC + 3 часа [ Летнее время ]</p>
+</td>
+</tr>
+</table>
+<br/>
+<table cellspacing="1" class="tablebg" width="100%">
+<tr>
+<td align="right" class="cat" colspan="5"> </td>
+</tr>
+<tr>
+<th colspan="2"> Форум </th>
+<th width="50"> Темы </th>
+<th width="50"> Сообщений </th>
+<th> Последнее сообщение </th>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read_subforum.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/question.gif"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=29.html">Общие вопросы</a>
+<p class="forumdesc">В данном разделе обсуждаются общие вопросы использования Visio</p>
+<p class="forumdesc"><strong>Подфорум: </strong> <a class="subforum read" href="viewforum.php_f=24.html">Полезные ссылки</a></p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">424</p></td>
+<td align="center" class="row2"><p class="topicdetails">4498</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=29_t=2198.html" title="Выбрасывает при сохранении">Выбрасывает при сохранении</a><a href="viewtopic.php_f=29_p=19570.html#p19570" title="Re: Выбрасывает при сохранении"></a></p>
+<p class="topicdetails">12 фев 2026, 19:48</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=61" style="color: #AA0000;">Surrogate</a> <a href="viewtopic.php_f=29_p=19570.html#p19570"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read_subforum.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/GetStarted.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=3.html">Трафареты и шаблоны</a>
+<p class="forumdesc">Обсуждение вопросов создания трафаретов и шаблонов.<br/>Авторские работы пользователей форума</p>
+<p class="forumdesc"><strong>Подфорум: </strong> <a class="subforum read" href="viewforum.php_f=49.html">Полезные ссылки</a></p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">92</p></td>
+<td align="center" class="row2"><p class="topicdetails">1212</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=3_t=1571.html" title="Схемы соединения волокон ВОЛС (схемы сварки, кросс схемы)">Схемы соединения волокон ...</a><a href="viewtopic.php_f=3_p=19537.html#p19537" title="Re: Схемы соединения волокон ВОЛС (схемы сварки, кросс схемы)"></a></p>
+<p class="topicdetails">06 дек 2025, 19:15</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=61" style="color: #AA0000;">Surrogate</a> <a href="viewtopic.php_f=3_p=19537.html#p19537"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read_subforum.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/visLogo.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=2.html">Версии и варианты поставки Visio</a>
+<p class="forumdesc">Обсуждение отличий различных версий: интерфейс пользователя, комплектация поставки, баги и т.п.</p>
+<p class="forumdesc"><strong>Подфорум: </strong> <a class="subforum read" href="viewforum.php_f=28.html">Публикации официального русскоязычного блога Visio</a></p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">111</p></td>
+<td align="center" class="row2"><p class="topicdetails">1051</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=2_t=657.html" title="Создание пользовательского риббона используя xml в визио 2010">Создание пользовательског...</a><a href="viewtopic.php_f=2_p=19217.html#p19217" title="Re: Создание пользовательского риббона используя xml в визио 201"></a></p>
+<p class="topicdetails">28 окт 2024, 16:37</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=61" style="color: #AA0000;">Surrogate</a> <a href="viewtopic.php_f=2_p=19217.html#p19217"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+<tr>
+<td align="center" class="row1" width="50"><img alt="Нет новых сообщений" height="25" src="./styles/subsilver2-modded/imageset/forum_read_subforum.gif" title="Нет новых сообщений" width="46"/></td>
+<td class="row1" width="100%">
+<div style="float: left; margin-right: 5px;"><img alt="Нет новых сообщений" src="http://visio.getbb.ru/images/ranks/visio_getbb_ru/fun.png"/></div><div style="float: left;">
+<a class="forumlink" href="viewforum.php_f=18.html">Свободная трибуна</a>
+<p class="forumdesc">На данной ветке форума предлагаю обсуждать вопросы, не связанные непосредственно с Visio и программированием под него</p>
+<p class="forumdesc"><strong>Подфорум: </strong> <a class="subforum read" href="viewforum.php_f=19.html">Флейм</a></p>
+</div> </td>
+<td align="center" class="row2"><p class="topicdetails">66</p></td>
+<td align="center" class="row2"><p class="topicdetails">828</p></td>
+<td align="center" class="row2" nowrap="nowrap">
+<p class="topicdetails"><a href="viewtopic.php_f=18_t=906.html" title="Примочки к визио и не только">Примочки к визио и не только</a><a href="viewtopic.php_f=18_p=19236.html#p19236" title="Re: Примочки к визио и не только"></a></p>
+<p class="topicdetails">03 дек 2024, 15:26</p>
+<p class="topicdetails"><a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=100" style="color: #0000FF;">immortal</a> <a href="viewtopic.php_f=18_p=19236.html#p19236"><img alt="Перейти к последнему сообщению" height="9" src="./styles/subsilver2-modded/imageset/icon_topic_latest.gif" title="Перейти к последнему сообщению" width="18"/></a>
+</p>
+</td>
+</tr>
+</table> <br clear="all"/>
+<div id="pagecontent">
+<br clear="all"/>
+</div>
+<table cellpadding="0" cellspacing="1" class="tablebg" style="margin-top: 5px;" width="100%">
+<tr>
+<td class="row1">
+<p class="breadcrumbs"><a href="./portal.php">Портал</a> » <a href="index.php.html">Список форумов</a> » <a href="viewforum.php_f=1.html">Форум пользователей</a></p>
+<p class="datetime">Часовой пояс: UTC + 3 часа [ Летнее время ]</p>
+</td>
+</tr>
+</table><br/>
+<!-- Yandex.RTB R-A-1239576-1 -->
+<div id="yandex_rtb_R-A-1239576-1" style="display: table;margin-right:auto;margin-left:auto;"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-1239576-1",
+                renderTo: "yandex_rtb_R-A-1239576-1",
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+<br clear="all"/>
+<table cellspacing="1" class="tablebg" width="100%">
+<tr>
+<td class="cat"><h4>Кто сейчас на конференции</h4></td>
+</tr>
+<tr>
+<td class="row1"><p class="gensmall">Сейчас этот форум просматривают: нет зарегистрированных пользователей и гости: 1</p></td>
+</tr>
+</table>
+<br clear="all"/>
+<table cellspacing="0" width="100%">
+<tr>
+<td></td>
+<td align="right"> <form action="./viewforum.php" method="post" name="jumpbox" onsubmit="if(document.jumpbox.f.value == -1){return false;}">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td nowrap="nowrap"><span class="gensmall">Перейти:</span> <select name="f" onchange="if(this.options[this.selectedIndex].value != -1){ document.forms['jumpbox'].submit() }">
+<option value="-1">Выберите форум</option>
+<option value="-1">------------------</option> <option selected="selected" value="1">Форум пользователей</option>
+<option value="29">   Общие вопросы</option>
+<option value="24">      Полезные ссылки</option>
+<option value="3">   Трафареты и шаблоны</option>
+<option value="49">      Полезные ссылки</option>
+<option value="2">   Версии и варианты поставки Visio</option>
+<option value="28">      Публикации официального русскоязычного блога Visio</option>
+<option value="18">   Свободная трибуна</option>
+<option value="19">      Флейм</option>
+<option value="4">Форум разработчиков</option>
+<option value="6">   Программирование</option>
+<option value="22">      Полезные ссылки</option>
+<option value="5">   ShapeSheet</option>
+<option value="21">      Полезные ссылки</option>
+<option value="15">   Склад полезных макросов</option>
+<option value="30">Работы участников форума</option>
+<option value="32">Работа</option>
+<option value="33">   Исполнители</option>
+<option value="34">   Заказы</option>
+<option value="7">О форуме</option>
+<option value="10">   Предложения и обсуждения</option>
+<option value="9">   Объявления и указания</option>
+<option value="25">Коллективная работа</option>
+<option value="44">   АСУТП</option>
+<option value="42">   Инженерные системы</option>
+<option value="26">   Схема электрощита</option>
+<option value="50">   Надстройка "Хранилище макросов"</option>
+<option value="52">   Комплект проектной/рабочей документации</option>
+<option value="38">База знаний</option>
+<option value="39">   Документация</option>
+<option value="40">   Типичные проблемы</option>
+<option value="41">   Установка и настройка</option>
+<option value="53">VisioPort</option>
+<option value="54">   Visio Navigator</option>
+<option value="55">   Прочее к VisioPort</option>
+<option value="56">   Перенесено из Gumroad</option>
+</select> <input class="btnlite" type="submit" value="Перейти"/></td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+</table>
+</div>
+<!--
+	We request you retain the full copyright notice below including the link to www.phpbb.com.
+	This not only gives respect to the large amount of time given freely by the developers
+	but also helps build interest, traffic and use of phpBB3. If you (honestly) cannot retain
+	the full copyright we ask you at least leave in place the "Powered by phpBB" line, with
+	"phpBB" linked to www.phpbb.com. If you refuse to include even this then support on our
+	forums may be affected.
+
+	The phpBB Group : 2006
+//-->
+<div id="wrapfooter">
+<span class="copyright">Powered by <a href="http://www.phpbb.com/">phpBB</a> © 2000, 2002, 2005, 2007 phpBB Group
+	<br/>Вы можете <a href="http://getbb.ru/">создать форум бесплатно</a> PHPBB3 на Getbb.Ru, Также возможно <a href="http://mybb2.ru/">сделать готовый форум</a> PHPBB2 на Mybb2.ru <br/><a href="http://www.phpbbguru.net/">Русская поддержка phpBB</a></span>
+</div>
+<!--LiveInternet counter--><script type="text/javascript"><!--
+new Image().src = "http://counter.yadro.ru/hit;getbb?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random();//--></script><!--/LiveInternet--></body>
+</html>
