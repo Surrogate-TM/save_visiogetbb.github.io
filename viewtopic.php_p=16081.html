@@ -1,0 +1,744 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="ru-ru" xml:lang="ru-ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<meta content="ru-ru" http-equiv="content-language"/>
+<meta content="text/css" http-equiv="content-style-type"/>
+<meta content="no" http-equiv="imagetoolbar"/>
+<meta content="document" name="resource-type"/>
+<meta content="global" name="distribution"/>
+<meta content="2002-2006 phpBB Group" name="copyright"/>
+<meta content="" name="keywords"/>
+<meta content="" name="description"/>
+<title>Форум пользователей Visio • Просмотр темы - Новые BBCode на форуме</title>
+<link href="/rss.php" rel="alternate" title="Форум пользователей Visio" type="application/rss+xml"/>
+<link href="./styles/subsilver2-modded/theme/stylesheet.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript">
+// <![CDATA[
+
+function popup(url, width, height, name)
+{
+	if (!name)
+	{
+		name = '_popup';
+	}
+
+	window.open(url.replace(/&amp;/g, '&'), name, 'height=' + height + ',resizable=yes,scrollbars=yes,width=' + width);
+	return false;
+}
+
+function jumpto()
+{
+	var page = prompt('Введите номер страницы, на которую хотите перейти:', '1');
+	var perpage = '';
+	var base_url = '';
+
+	if (page !== null && !isNaN(page) && page > 0)
+	{
+		document.location.href = base_url.replace(/&amp;/g, '&') + '&start=' + ((page - 1) * perpage);
+	}
+}
+
+/**
+* Find a member
+*/
+function find_username(url)
+{
+	popup(url, 760, 570, '_usersearch');
+	return false;
+}
+
+/**
+* Mark/unmark checklist
+* id = ID of parent container, name = name prefix, state = state [true/false]
+*/
+function marklist(id, name, state)
+{
+	var parent = document.getElementById(id);
+	if (!parent)
+	{
+		eval('parent = document.' + id);
+	}
+
+	if (!parent)
+	{
+		return;
+	}
+
+	var rb = parent.getElementsByTagName('input');
+	
+	for (var r = 0; r < rb.length; r++)
+	{
+		if (rb[r].name.substr(0, name.length) == name)
+		{
+			rb[r].checked = state;
+		}
+	}
+}
+
+
+// ]]>
+</script>
+</head>
+<body class="ltr">
+<a name="top"></a>
+<div id="wrapheader">
+<div id="logodesc">
+<table cellspacing="0" width="100%">
+<tr>
+<td><a href="index.php.html"><img alt="" src="./styles/subsilver2-modded/imageset/../.././../images/ranks/visio_getbb_ru/logo.png" title=""/></a></td>
+<td align="center" width="100%"><h1>Форум пользователей Visio</h1><span class="gen">Форум по вопросам применения и программирования в Visio</span></td>
+</tr>
+</table>
+</div>
+<div id="menubar">
+<table cellspacing="0" width="100%">
+<tr>
+<td class="genmed">
+<a href="./ucp.php?mode=login"><img alt="*" height="13" src="./styles/subsilver2-modded/theme/images/icon_mini_login.gif" width="12"/> Вход</a>   <a href="./ucp.php?mode=register"><img alt="*" height="13" src="./styles/subsilver2-modded/theme/images/icon_mini_register.gif" width="12"/> Регистрация</a>
+</td>
+<td align="right" class="genmed">
+ <a href="https://visioport.epizy.com/search.htm"><img alt="*" height="13" src="./styles/subsilver2-modded/theme/images/icon_mini_search.gif" width="12"/> Поиск в Visioport</a>  
+				<a href="gallery_index.php.html" title="Альбомы изображений"><img alt="*" height="13" src="./styles/subsilver2-modded/theme/images/icon_mini_gallery.gif" width="12"/> Альбомы</a>   
+				<a href="./faq.php"><img alt="*" height="13" src="./styles/subsilver2-modded/theme/images/icon_mini_faq.gif" width="12"/> FAQ</a>
+				   <a href="./search.php"><img alt="*" height="13" src="./styles/subsilver2-modded/theme/images/icon_mini_search.gif" width="12"/> Поиск</a> </td>
+</tr>
+</table>
+</div>
+<div id="datebar">
+<table cellspacing="0" width="100%">
+<tr>
+<td class="gensmall"></td>
+<td align="right" class="gensmall">Текущее время: 19 май 2026, 01:29<br/></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="wrapcentre">
+<p class="searchbar">
+<span style="float: left;"><a href="./search.php?search_id=unanswered">Сообщения без ответов</a> | <a href="./search.php?search_id=active_topics">Активные темы</a></span>
+</p>
+<br style="clear: both;"/>
+<table cellpadding="0" cellspacing="1" class="tablebg" style="margin-top: 5px;" width="100%">
+<tr>
+<td class="row1">
+<p class="breadcrumbs"><a href="./portal.php">Портал</a> » <a href="index.php.html">Список форумов</a> » <a href="viewforum.php_f=1.html">Форум пользователей</a> » <a href="viewforum.php_f=29.html">Общие вопросы</a></p>
+<p class="datetime">Часовой пояс: UTC + 3 часа [ Летнее время ]</p>
+</td>
+</tr>
+</table>
+<br/>
+<div id="pageheader">
+<h2><a class="titles" href="viewtopic.php_f=29_t=236.html">Новые BBCode на форуме</a></h2>
+</div>
+<br clear="all"/><br/>
+<div id="pagecontent">
+<table cellspacing="1" width="100%">
+<tr>
+<td align="left" nowrap="nowrap" valign="middle">
+<a href="./posting.php?mode=post&amp;f=29"><img alt="Начать новую тему" src="./styles/subsilver2-modded/imageset/ru/button_topic_new.gif" title="Начать новую тему"/></a> <a href="./posting.php?mode=reply&amp;f=29&amp;t=236"><img alt="Ответить на тему" src="./styles/subsilver2-modded/imageset/ru/button_topic_reply.gif" title="Ответить на тему"/></a> </td>
+<td class="nav" nowrap="nowrap" valign="middle"> Страница <strong>1</strong> из <strong>1</strong><br/></td>
+<td class="gensmall" nowrap="nowrap"> [ Сообщений: 7 ] </td>
+<td align="right" class="gensmall" nowrap="nowrap" width="100%"></td>
+</tr>
+</table>
+<table cellspacing="1" class="tablebg" width="100%">
+<tr>
+<td class="cat">
+<table cellspacing="0" width="100%">
+<tr>
+<td class="nav" nowrap="nowrap"> 
+								</td>
+<td align="right" class="nav" nowrap="nowrap"><a href="viewtopic.php_f=29_t=236.html">Пред. тема</a> | <a href="viewtopic.php_f=29_t=236.html">След. тема</a> </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table cellspacing="1" class="tablebg" width="100%">
+<tr>
+<th>Автор</th>
+<th>Сообщение</th>
+</tr>
+<tr class="row1">
+<td align="center" valign="middle">
+<a name="p1720"></a>
+<b class="postauthor" style="color: #AA0000">Surrogate</b>
+</td>
+<td height="25" width="100%">
+<table cellspacing="0" width="100%">
+<tr>
+<td class="gensmall" width="100%"><div style="float: left;"> <b>Заголовок сообщения:</b> Новые BBCode на форуме</div><div style="float: right;"><a href="viewtopic.php_p=1720.html#p1720"><img alt="Сообщение" height="9" src="./styles/subsilver2-modded/imageset/icon_post_target.gif" title="Сообщение" width="12"/></a><b>Добавлено:</b> 13 ноя 2012, 10:02 </div></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="row1">
+<td class="profile" valign="top">
+<table align="center" cellspacing="4" width="150">
+<tr>
+<td><img alt="Не в сети" src="./styles/subsilver2-modded/imageset/ru/icon_user_offline.gif" title="Не в сети"/></td>
+</tr>
+<tr>
+<td class="postdetails">Content manager</td>
+</tr>
+<tr>
+<td><img alt="Content manager" src="images/ranks/visio_getbb_ru/ShapeSheet.png" title="Content manager"/></td>
+</tr>
+<tr>
+<td><img alt="Аватара пользователя" height="120" src="./images/avatars/upload/visio_getbb_ru/c142221d528ebb74568a4013d1829b09_61.png?1653574463" width="120"/></td>
+</tr>
+</table>
+<span class="postdetails">
+<br/><b>Зарегистрирован:</b> 02 окт 2009, 01:01<br/><b>Сообщений:</b> 5137<br/><b>Откуда:</b> оттуда						<br/><b>Должность:</b> Дизайнер по оформлению документации									</span>
+</td>
+<td valign="top">
+<table cellspacing="5" width="100%">
+<tr>
+<td>
+<div class="postbody"><!-- google_ad_section_start --><div><img src="http://forumimage.ru/uploads/20191027/157218400591245654.png" style="float: right; padding-right: 10px; padding-bottom: 5px;"/>Вот так теперь выглядит панель с <span style="font-weight: bold">BBCode</span></div><span style="font-weight: bold">Появились новые кнопки</span><br/>1. Выделение <span style="background-color: #FFFF00">текста</span> маркером<br/><br/>2. Предупреждающий текст на черном фоне и красной рамке<br/><br/>3. Обтекание картинки текстом (кстати с его помощью был вставлена верхняя картинка в этом тексте)<br/><br/>4. Текст в рамке помеченный знаком «<span style="font-weight: bold">!</span>»<br/><br/>5. Перечеркивание <span style="text-decoration:line-through;">текста</span><br/>(то чего мне так сильно не хватало на этом форуме)<br/><br/>Надеюсь этот пост будет полезен для пользователей форума, ибо с помощью BBCode ваши сообщения можно делать более информативными<!-- google_ad_section_end --></div>
+<br/><br/>
+<table cellspacing="1" class="tablebg" width="100%">
+<tr>
+<td class="row3"><span class="gensmall">Последний раз редактировалось <a class="username-coloured" href="./memberlist.php?mode=viewprofile&amp;u=61" style="color: #AA0000;">Surrogate</a> 01 май 2026, 03:04, всего редактировалось 1 раз.</span></td>
+</tr>
+<tr>
+<td class="row2"><span class="genmed">в связи с потерей актуальности</span></td>
+</tr>
+</table>
+<br clear="all"/><br/>
+<table cellspacing="0" width="100%">
+<tr valign="middle">
+<td align="right" class="gensmall">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="row1">
+<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+<td><div class="gensmall" style="float: left;"> <a href="./memberlist.php?mode=viewprofile&amp;u=61"><img alt="Профиль" src="./styles/subsilver2-modded/imageset/ru/icon_user_profile.gif" title="Профиль"/></a>  </div> <div class="gensmall" style="float: right;"><a href="./posting.php?mode=quote&amp;f=29&amp;p=1720"><img alt="Ответить с цитатой" src="./styles/subsilver2-modded/imageset/ru/icon_post_quote.gif" title="Ответить с цитатой"/></a>  </div></td>
+</tr>
+<tr>
+<td class="spacer" colspan="2" height="1"><img alt="" height="1" src="images/spacer.gif" width="1"/></td>
+</tr>
+</table>
+<table cellspacing="1" class="tablebg" width="100%">
+<tr class="row2">
+<td align="center" valign="middle">
+<a name="p10426"></a>
+<b class="postauthor" style="color: #AA0000">Surrogate</b>
+</td>
+<td height="25" width="100%">
+<table cellspacing="0" width="100%">
+<tr>
+<td class="gensmall" width="100%"><div style="float: left;"> <b>Заголовок сообщения:</b> Re: Новые BBCode на форуме</div><div style="float: right;"><a href="viewtopic.php_p=10426.html#p10426"><img alt="Сообщение" height="9" src="./styles/subsilver2-modded/imageset/icon_post_target.gif" title="Сообщение" width="12"/></a><b>Добавлено:</b> 08 дек 2016, 13:35 </div></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="row2">
+<td class="profile" valign="top">
+<table align="center" cellspacing="4" width="150">
+<tr>
+<td><img alt="Не в сети" src="./styles/subsilver2-modded/imageset/ru/icon_user_offline.gif" title="Не в сети"/></td>
+</tr>
+<tr>
+<td class="postdetails">Content manager</td>
+</tr>
+<tr>
+<td><img alt="Content manager" src="images/ranks/visio_getbb_ru/ShapeSheet.png" title="Content manager"/></td>
+</tr>
+<tr>
+<td><img alt="Аватара пользователя" height="120" src="./images/avatars/upload/visio_getbb_ru/c142221d528ebb74568a4013d1829b09_61.png?1653574463" width="120"/></td>
+</tr>
+</table>
+<span class="postdetails">
+<br/><b>Зарегистрирован:</b> 02 окт 2009, 01:01<br/><b>Сообщений:</b> 5137<br/><b>Откуда:</b> оттуда						<br/><b>Должность:</b> Дизайнер по оформлению документации									</span>
+</td>
+<td valign="top">
+<table cellspacing="5" width="100%">
+<tr>
+<td>
+<div class="postbody"><!-- google_ad_section_start -->Давненько я не писал в этой ветке ! Несмотря на то, что новые BBCode добавлялись/убирались на этом форуме…<a class="postlink" href="https://www.youtube.com/playlist?list=PLZ_N2AKCjf7RV5HFY7guV30WoedWCwQFH" target="_blank"><img alt="Изображение" src="http://visio.getbb.ru/images/smilies/icon_e_biggrin.gif"/></a><br/>Теперь вот решил навести с этим порядок - под каждым тегом  который поддерживается сейчас на форуме теперь можно увидеть синтаксис с которым применяется этот тэг ! просто наведите курсор мыши на тег (кнопку над полем ввода текста) и увидите подсказку по синтаксису тэга под кнопкой. <br/><img alt="Изображение" src="http://forumimage.ru/uploads/20161208/14811886365915335.gif"/><br/>тэг <span style="font-weight: bold">shapesheet</span> сделал сам, мои комментарии по его использованию<br/><div class="codetitle"><b>Код:</b></div><div class="codecontent">[shapesheet][s]Название секции[/s][n]Название ячейки[/n][v]Значение в ячейке[/v][/shapesheet]</div> например с помощью такой комбинации <div class="codetitle"><b>Код:</b></div><div class="codecontent">[shapesheet][s]Shape Transform[/s][n]Width[/n][v]Guard(User.Row_1)[/v][/shapesheet]</div> получается такой вот результат:<br/><div class="shapesheet">
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="width:100.0%;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0cm 6.0pt 0cm 6.0pt" width="100%">
+<span style="s: Shape Transform; n: Width; v: Guard(User.Row_1)"></span>
+<tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+<td colspan="2" style="width:80.0%;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;background:navy;padding:0cm 6.0pt 0cm 6.0pt" valign="top" width="80%">
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal"><b style="mso-bidi-font-weight:normal"><span style="color:white;
+  mso-ansi-language:EN">Shape Transform<o:p></o:p></span></b></p>
+</td>
+</tr>
+<tr style="mso-yfti-irow:1;mso-yfti-lastrow:yes">
+<td style="width:20.0%;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  background:#A6A6A6;mso-shading:windowtext;mso-pattern:solid #A6A6A6;
+  padding:0cm 6.0pt 0cm 6.0pt" valign="top" width="20%">
+<p align="right" class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;
+  text-align:right;line-height:normal"><span style="color:red;mso-ansi-language:
+  EN">Width<o:p></o:p></span></p>
+</td>
+<td style="width:80.0%;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0cm 6.0pt 0cm 6.0pt" valign="top" width="80%">
+<p class="MsoNormal" style="margin-bottom:0cm;margin-bottom:.0001pt;line-height:
+  normal"><span style="color:blue;mso-ansi-language:EN">Guard(User.Row_1)<o:p></o:p></span></p>
+</td>
+</tr>
+</table>
+<p class="MsoNormal"><span lang="EN-US"><o:p> </o:p></span></p>
+</div><br/><hr title=""/> <span style="font-size: 150%; line-height: normal"><span style="font-weight: bold">Надеюсь эта информация поможет вам оформлять ваши сообщения максимально информативно !</span></span><!-- google_ad_section_end --></div>
+<br clear="all"/><br/>
+<table cellspacing="0" width="100%">
+<tr valign="middle">
+<td align="right" class="gensmall">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="row2">
+<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+<td><div class="gensmall" style="float: left;"> <a href="./memberlist.php?mode=viewprofile&amp;u=61"><img alt="Профиль" src="./styles/subsilver2-modded/imageset/ru/icon_user_profile.gif" title="Профиль"/></a>  </div> <div class="gensmall" style="float: right;"><a href="./posting.php?mode=quote&amp;f=29&amp;p=10426"><img alt="Ответить с цитатой" src="./styles/subsilver2-modded/imageset/ru/icon_post_quote.gif" title="Ответить с цитатой"/></a>  </div></td>
+</tr>
+<tr>
+<td class="spacer" colspan="2" height="1"><img alt="" height="1" src="images/spacer.gif" width="1"/></td>
+</tr>
+</table>
+<table cellspacing="1" class="tablebg" width="100%">
+<tr class="row1">
+<td align="center" valign="middle">
+<a name="p13380"></a>
+<b class="postauthor" style="color: #AA0000">Surrogate</b>
+</td>
+<td height="25" width="100%">
+<table cellspacing="0" width="100%">
+<tr>
+<td><img alt="" height="24" src="./images/icons/../ranks/visio_getbb_ru/blain.png" title="" width="24"/></td>
+<td class="gensmall" width="100%"><div style="float: left;"> <b>Заголовок сообщения:</b> Re: Новые BBCode на форуме</div><div style="float: right;"><a href="viewtopic.php_p=13380.html#p13380"><img alt="Сообщение" height="9" src="./styles/subsilver2-modded/imageset/icon_post_target.gif" title="Сообщение" width="12"/></a><b>Добавлено:</b> 29 апр 2019, 23:55 </div></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="row1">
+<td class="profile" valign="top">
+<table align="center" cellspacing="4" width="150">
+<tr>
+<td><img alt="Не в сети" src="./styles/subsilver2-modded/imageset/ru/icon_user_offline.gif" title="Не в сети"/></td>
+</tr>
+<tr>
+<td class="postdetails">Content manager</td>
+</tr>
+<tr>
+<td><img alt="Content manager" src="images/ranks/visio_getbb_ru/ShapeSheet.png" title="Content manager"/></td>
+</tr>
+<tr>
+<td><img alt="Аватара пользователя" height="120" src="./images/avatars/upload/visio_getbb_ru/c142221d528ebb74568a4013d1829b09_61.png?1653574463" width="120"/></td>
+</tr>
+</table>
+<span class="postdetails">
+<br/><b>Зарегистрирован:</b> 02 окт 2009, 01:01<br/><b>Сообщений:</b> 5137<br/><b>Откуда:</b> оттуда						<br/><b>Должность:</b> Дизайнер по оформлению документации									</span>
+</td>
+<td valign="top">
+<table cellspacing="5" width="100%">
+<tr>
+<td>
+<div class="postbody"><!-- google_ad_section_start -->Некоторые из используемых в настоящее время BB-кодов были добавлены уже некоторое время назад. В свое время я поленился дать им более развернутое описание!<br/>Но лучше поздно, чем никогда.<br/><hr title=""/><br/><span style="font-size: 150%; line-height: normal">Встраивание видео</span><br/><span style="font-size: 125%; line-height: normal">Тэг youtube</span><br/>Предназначен для встраивания в сообщения видео размещенных в этом популярном видео-хостинге. Синтаксис довольно простой.<br/><span style="text-decoration: underline"><span style="font-weight: bold">Синтаксис:</span></span><br/><div class="codetitle"><b>Код:</b></div><div class="codecontent">[youtube]video_id[/youtube]</div> , где <span style="color: blue"><span style="font-weight: bold">video_id</span></span> - не полный адрес видео, а его фрагмент выделенный маркером (идентификатор видео).<br/><div class="quotetitle"><b>Цитата:</b></div><div class="quotecontent">[youtube]https://www.youtube.com/watch?v=<span style="background-color: #FFFF00">caqscXBJp3o</span>[/youtube]<br/>[youtube]https://youtu.be/<span style="background-color: #FFFF00">iyfT0IVCFDE</span>[/youtube]</div><span style="font-size: 125%; line-height: normal">Тэг media</span><br/>Судя по описанию на сайте автора поддерживается ряд сервисов.<br/><div class="quotetitle"><a class="postlink" href="http://veg.by/en/about/" target="_blank">Evgeny Vrublevsky</a> в ветке <a class="postlink" href="http://phpbbex.com/forum/viewtopic.php?t=32" target="_blank">phpBB [media] — bbcode для вставки аудио, видео, карт и др. (без правок кода)</a> писал(а):</div><div class="quotecontent">все сервисы из phpBB [video] (youtube.com, vimeo.com, rutube.ru, vk.com и др.)<br/>все сервисы из phpBB [audio] (soundcloud.com, muzebra.com, pleer.com и др.)<br/>docs.google.com (документы, таблицы и формы; берите ссылку из File » Publish to the web)<br/>maps.google.com (карты, панорамы)<br/>openstreetmap.org (карты)<br/>360cities.net (панорамы)<br/>picasaweb.google.com (слайдшоу из галерей)<br/>dermandar.com (панорамы)<br/>share.mapbbcode.org (карты с вашими метками на ней)<br/>connect.garmin.com (GPS-треки)<br/>endomondo.com (маршруты и тренировки)<br/>gpsies.com (GPS-треки)<br/>bikemap.net (GPS-треки)<br/>livegpstracks.com (GPS-треки, поддерживаются только ссылки из кода встраивания)</div> Этот тег позволяет проигрывать встроенное видео с заданного момента. <br/><span style="text-decoration: underline"><span style="font-weight: bold">Синтаксис:</span></span><div class="quotetitle"><b>Цитата:</b></div><div class="quotecontent">[media]https://www.youtube.com/watch?v=<span style="background-color: #FFFF00">ONrb8Lgfx5w</span>&amp;t=<span style="background-color: #FFFF00">198s</span>[/media]</div>, где <span style="color: blue"><span style="font-weight: bold">ONrb8Lgfx5w</span></span> - идентификатор видео<br/><span style="color: blue"><span style="font-weight: bold">198s</span></span> - момент начала проигрывания встроенного видео в секундах.<hr title=""/><span style="font-size: 150%; line-height: normal">Встраивание документов</span><br/><span style="font-size: 125%; line-height: normal">Тэг pdfview</span><br/>Позволяет встраивать документы в форматах PDF, MS Word, MS Excel c возможностью промотки документа. Отображение содержимого происходит через сервис <a class="postlink" href="https://docs.google.com" target="_blank">документы Google</a>.<br/>Работает только с документами опубликованными на сайте, в т.ч. GitHub. Но не с документами размещенными на в облачных хранилищах, даже на <a class="postlink" href="https://drive.google.com/drive/my-drive" target="_blank">диске Google</a> (как ни странно) !<br/><span style="text-decoration: underline"><span style="font-weight: bold">Синтаксис:</span></span><br/><code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #2E8B57; display: inline;">[pdfview]URL[/pdfview]</code><!-- google_ad_section_end --></div>
+<br clear="all"/><br/>
+<table cellspacing="0" width="100%">
+<tr valign="middle">
+<td align="right" class="gensmall">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="row1">
+<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+<td><div class="gensmall" style="float: left;"> <a href="./memberlist.php?mode=viewprofile&amp;u=61"><img alt="Профиль" src="./styles/subsilver2-modded/imageset/ru/icon_user_profile.gif" title="Профиль"/></a>  </div> <div class="gensmall" style="float: right;"><a href="./posting.php?mode=quote&amp;f=29&amp;p=13380"><img alt="Ответить с цитатой" src="./styles/subsilver2-modded/imageset/ru/icon_post_quote.gif" title="Ответить с цитатой"/></a>  </div></td>
+</tr>
+<tr>
+<td class="spacer" colspan="2" height="1"><img alt="" height="1" src="images/spacer.gif" width="1"/></td>
+</tr>
+</table>
+<table cellspacing="1" class="tablebg" width="100%">
+<tr class="row2">
+<td align="center" valign="middle">
+<a name="p16081"></a>
+<b class="postauthor" style="color: #AA0000">Surrogate</b>
+</td>
+<td height="25" width="100%">
+<table cellspacing="0" width="100%">
+<tr>
+<td class="gensmall" width="100%"><div style="float: left;"> <b>Заголовок сообщения:</b> Re: Новые BBCode на форуме</div><div style="float: right;"><a href="viewtopic.php_p=16081.html#p16081"><img alt="Сообщение" height="9" src="./styles/subsilver2-modded/imageset/icon_post_target.gif" title="Сообщение" width="12"/></a><b>Добавлено:</b> 06 авг 2021, 17:49 </div></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="row2">
+<td class="profile" valign="top">
+<table align="center" cellspacing="4" width="150">
+<tr>
+<td><img alt="Не в сети" src="./styles/subsilver2-modded/imageset/ru/icon_user_offline.gif" title="Не в сети"/></td>
+</tr>
+<tr>
+<td class="postdetails">Content manager</td>
+</tr>
+<tr>
+<td><img alt="Content manager" src="images/ranks/visio_getbb_ru/ShapeSheet.png" title="Content manager"/></td>
+</tr>
+<tr>
+<td><img alt="Аватара пользователя" height="120" src="./images/avatars/upload/visio_getbb_ru/c142221d528ebb74568a4013d1829b09_61.png?1653574463" width="120"/></td>
+</tr>
+</table>
+<span class="postdetails">
+<br/><b>Зарегистрирован:</b> 02 окт 2009, 01:01<br/><b>Сообщений:</b> 5137<br/><b>Откуда:</b> оттуда						<br/><b>Должность:</b> Дизайнер по оформлению документации									</span>
+</td>
+<td valign="top">
+<table cellspacing="5" width="100%">
+<tr>
+<td>
+<div class="postbody"><!-- google_ad_section_start --><div class="quotetitle">Tumanov в сообщении <a class="postlink" href="viewtopic.php_p=13717.html#p13717">#13717</a> писал(а):</div><div class="quotecontent">Во всяком случае вреда от нее гораздо меньше, чем от вот таких видео-вставок. Кстати, я все собираюсь пройтись по форуму и поудалять подобные перлы, да никак руки не дойдут.</div> у вас руки не дошли, но я поправил теги: <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #2E8B57; display: inline;">[media]</code> и <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #2E8B57; display: inline;">[youtube]</code>.<br/>Теперь встроенное видео спрятано под спойлер, над спойлером есть прямая ссылка на видео (откроется в новой вкладке браузера)!<br/><img alt="Изображение" src="https://i.ibb.co/prTycND/IMG-20210806-164624.jpg"/><!-- google_ad_section_end --></div>
+<br clear="all"/><br/>
+<table cellspacing="0" width="100%">
+<tr valign="middle">
+<td align="right" class="gensmall">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="row2">
+<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+<td><div class="gensmall" style="float: left;"> <a href="./memberlist.php?mode=viewprofile&amp;u=61"><img alt="Профиль" src="./styles/subsilver2-modded/imageset/ru/icon_user_profile.gif" title="Профиль"/></a>  </div> <div class="gensmall" style="float: right;"><a href="./posting.php?mode=quote&amp;f=29&amp;p=16081"><img alt="Ответить с цитатой" src="./styles/subsilver2-modded/imageset/ru/icon_post_quote.gif" title="Ответить с цитатой"/></a>  </div></td>
+</tr>
+<tr>
+<td class="spacer" colspan="2" height="1"><img alt="" height="1" src="images/spacer.gif" width="1"/></td>
+</tr>
+</table>
+<table cellspacing="1" class="tablebg" width="100%">
+<tr class="row1">
+<td align="center" valign="middle">
+<a name="p16466"></a>
+<b class="postauthor" style="color: #AA0000">Surrogate</b>
+</td>
+<td height="25" width="100%">
+<table cellspacing="0" width="100%">
+<tr>
+<td class="gensmall" width="100%"><div style="float: left;"> <b>Заголовок сообщения:</b> Re: Новые BBCode на форуме</div><div style="float: right;"><a href="viewtopic.php_p=16466.html#p16466"><img alt="Сообщение" height="9" src="./styles/subsilver2-modded/imageset/icon_post_target.gif" title="Сообщение" width="12"/></a><b>Добавлено:</b> 10 дек 2021, 11:57 </div></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="row1">
+<td class="profile" valign="top">
+<table align="center" cellspacing="4" width="150">
+<tr>
+<td><img alt="Не в сети" src="./styles/subsilver2-modded/imageset/ru/icon_user_offline.gif" title="Не в сети"/></td>
+</tr>
+<tr>
+<td class="postdetails">Content manager</td>
+</tr>
+<tr>
+<td><img alt="Content manager" src="images/ranks/visio_getbb_ru/ShapeSheet.png" title="Content manager"/></td>
+</tr>
+<tr>
+<td><img alt="Аватара пользователя" height="120" src="./images/avatars/upload/visio_getbb_ru/c142221d528ebb74568a4013d1829b09_61.png?1653574463" width="120"/></td>
+</tr>
+</table>
+<span class="postdetails">
+<br/><b>Зарегистрирован:</b> 02 окт 2009, 01:01<br/><b>Сообщений:</b> 5137<br/><b>Откуда:</b> оттуда						<br/><b>Должность:</b> Дизайнер по оформлению документации									</span>
+</td>
+<td valign="top">
+<table cellspacing="5" width="100%">
+<tr>
+<td>
+<div class="postbody"><!-- google_ad_section_start -->Примерно полгода назад сделал новый BBCode для вставки кода из <a class="postlink" href="https://docs.github.com/en/github/writing-on-github/editing-and-sharing-content-with-gists/creating-gists" target="_blank">GitHub Gist</a> (сервиса для хранения фрагментов кода, созданный командой GitHub), наконец решил сделать этот BBCode общедоступным.  <img alt=":mrgreen:" src="./images/smilies/icon_mrgreen.gif" title="Зелёный"/><br/>Так как Gist поддерживает систему контроля версий, код внедренный на форуме всегда будет актуальным  <img alt=":!:" src="./images/smilies/icon_exclaim.gif" title="Восклицание"/> <br/><br/><span style="font-weight: bold">Синтаксис довольно простой</span>: <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #2E8B57; display: inline;">[gist]{URL}[/gist]</code><br/>в качестве ссылки на Gist нужно использовать ссылку которую вы можете получить непосредственно в верхней части справа страницы где расположен нужный вам Gist.<br/><img alt="Изображение" src="https://surrogate-tm.github.io/gifs/gist.gif"/><br/>В выпадающем списке изменить вариант <span style="font-weight: bold">Embed</span> на <span style="font-weight: bold">Share</span> и скопировать ссылку.<br/><br/>Содержимое Gist встроенное на форум будет спрятано под спойлер. Результат выглядит так:<br/><div class="quotetitle">Surrogate в сообщении <a class="postlink" href="viewtopic.php_p=11302.html#p11302">#11302</a> писал(а):</div><div class="quotecontent"><span style="font-weight: bold"><span style="color: red">Содержимое спрятано под спойлер ↓</span></span><div style="padding: 3px; background-color: #FFFFFF; border: 1px solid #d8d8d8; font-size: 1em;"><div style="text-transform: uppercase; border-bottom: 1px solid #CCCCCC; margin-bottom: 3px; font-size: 0.8em; font-weight: bold; display: block;"><span onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') {  this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerHTML = '<b>Спойлер: </b><a href=\'#\' onClick=\'return false;\'>↓</a>'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerHTML = '<b>Спойлер: </b><a href=\'#\' onClick=\'return false;\'>↕</a>'; }"></span><b>Спойлер: </b><a href="#" onclick="return false;">↕</a></div><div class="quotecontent"><div style="display: none;"><script src="https://gist.github.com/Surrogate-TM/c81147acc163b6c2f8f97c5a98b0e5b1.js"></script></div></div></div><br/></div><!-- google_ad_section_end --></div>
+<br clear="all"/><br/>
+<table cellspacing="0" width="100%">
+<tr valign="middle">
+<td align="right" class="gensmall">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="row1">
+<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+<td><div class="gensmall" style="float: left;"> <a href="./memberlist.php?mode=viewprofile&amp;u=61"><img alt="Профиль" src="./styles/subsilver2-modded/imageset/ru/icon_user_profile.gif" title="Профиль"/></a>  </div> <div class="gensmall" style="float: right;"><a href="./posting.php?mode=quote&amp;f=29&amp;p=16466"><img alt="Ответить с цитатой" src="./styles/subsilver2-modded/imageset/ru/icon_post_quote.gif" title="Ответить с цитатой"/></a>  </div></td>
+</tr>
+<tr>
+<td class="spacer" colspan="2" height="1"><img alt="" height="1" src="images/spacer.gif" width="1"/></td>
+</tr>
+</table>
+<table cellspacing="1" class="tablebg" width="100%">
+<tr class="row2">
+<td align="center" valign="middle">
+<a name="p17482"></a>
+<b class="postauthor" style="color: #AA0000">Surrogate</b>
+</td>
+<td height="25" width="100%">
+<table cellspacing="0" width="100%">
+<tr>
+<td><img alt="" height="16" src="./images/icons/smile/info.gif" title="" width="16"/></td>
+<td class="gensmall" width="100%"><div style="float: left;"> <b>Заголовок сообщения:</b> Re: Новые BBCode на форуме</div><div style="float: right;"><a href="viewtopic.php_p=17482.html#p17482"><img alt="Сообщение" height="9" src="./styles/subsilver2-modded/imageset/icon_post_target.gif" title="Сообщение" width="12"/></a><b>Добавлено:</b> 17 ноя 2022, 01:40 </div></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="row2">
+<td class="profile" valign="top">
+<table align="center" cellspacing="4" width="150">
+<tr>
+<td><img alt="Не в сети" src="./styles/subsilver2-modded/imageset/ru/icon_user_offline.gif" title="Не в сети"/></td>
+</tr>
+<tr>
+<td class="postdetails">Content manager</td>
+</tr>
+<tr>
+<td><img alt="Content manager" src="images/ranks/visio_getbb_ru/ShapeSheet.png" title="Content manager"/></td>
+</tr>
+<tr>
+<td><img alt="Аватара пользователя" height="120" src="./images/avatars/upload/visio_getbb_ru/c142221d528ebb74568a4013d1829b09_61.png?1653574463" width="120"/></td>
+</tr>
+</table>
+<span class="postdetails">
+<br/><b>Зарегистрирован:</b> 02 окт 2009, 01:01<br/><b>Сообщений:</b> 5137<br/><b>Откуда:</b> оттуда						<br/><b>Должность:</b> Дизайнер по оформлению документации									</span>
+</td>
+<td valign="top">
+<table cellspacing="5" width="100%">
+<tr>
+<td>
+<div class="postbody"><!-- google_ad_section_start -->По мотивам <a class="postlink" href="viewtopic.php_p=17461.html#p17461">недавнего обсуждения</a> подготовил новый тег <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #2E8B57; display: inline;">tg</code>, позволяющий встраивать на форуме посты из Telegram-каналов!<br/><br/><span style="font-weight: bold">Синтаксис</span>: <br/><img alt="Изображение" src="https://i.imgur.com/HpJqFhK.png"/><br/>Формат идентификатора поста состоит из <идентификатора канала>/<номер поста>, т.е. правая часть гиперссылки после префикса <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #2E8B57; display: inline;">t.me/</code><br/><img alt="Изображение" src="https://i.imgur.com/K6KLxHV.png"/><br/><div style="border: 5px double red; padding: 10px; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255);">Работает только с каналами на которых возможен просмотр браузере, а не только в приложении Telegram (Preview channel).</div><br/>Встроенное содержимое поста будет спрятано под спойлер. <br/><br/>Результат выглядит так:<br/><span style="font-weight: bold"><span style="color: red">ТГ-пост спрятан под спойлер ↓</span><span style="color: blue"><a href="https://t.me/habr_com/54801" target="_blank"> Прямая ссылка на пост https://t.me/habr_com/54801</a></span></span><div style="padding: 3px; background-color: #FFFFFF; border: 1px solid #d8d8d8; font-size: 1em;"><div style="text-transform: uppercase; border-bottom: 1px solid #CCCCCC; margin-bottom: 3px; font-size: 0.8em; font-weight: bold; display: block;"><span onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') {  this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerHTML = '<b>Спойлер: </b><a href=\'#\' onClick=\'return false;\'>▲</a>'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerHTML = '<b>Спойлер: </b><a href=\'#\' onClick=\'return false;\'>▼</a>'; }"></span><b>Спойлер: </b><a href="#" onclick="return false;">▼</a></div><div class="quotecontent"><div style="display: none;"><script async="" data-telegram-post="habr_com/54801" data-width="100%" src="https://telegram.org/js/telegram-widget.js?21"></script></div></div></div><!-- google_ad_section_end --></div>
+<br clear="all"/><br/>
+<table cellspacing="0" width="100%">
+<tr valign="middle">
+<td align="right" class="gensmall">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="row2">
+<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+<td><div class="gensmall" style="float: left;"> <a href="./memberlist.php?mode=viewprofile&amp;u=61"><img alt="Профиль" src="./styles/subsilver2-modded/imageset/ru/icon_user_profile.gif" title="Профиль"/></a>  </div> <div class="gensmall" style="float: right;"><a href="./posting.php?mode=quote&amp;f=29&amp;p=17482"><img alt="Ответить с цитатой" src="./styles/subsilver2-modded/imageset/ru/icon_post_quote.gif" title="Ответить с цитатой"/></a>  </div></td>
+</tr>
+<tr>
+<td class="spacer" colspan="2" height="1"><img alt="" height="1" src="images/spacer.gif" width="1"/></td>
+</tr>
+</table>
+<table cellspacing="1" class="tablebg" width="100%">
+<tr class="row1">
+<td align="center" valign="middle">
+<a name="p18176"></a>
+<b class="postauthor" style="color: #AA0000">Surrogate</b>
+</td>
+<td height="25" width="100%">
+<table cellspacing="0" width="100%">
+<tr>
+<td class="gensmall" width="100%"><div style="float: left;"> <b>Заголовок сообщения:</b> Re: Новые BBCode на форуме</div><div style="float: right;"><a href="viewtopic.php_p=18176.html#p18176"><img alt="Сообщение" height="9" src="./styles/subsilver2-modded/imageset/icon_post_target.gif" title="Сообщение" width="12"/></a><b>Добавлено:</b> 21 мар 2023, 13:43 </div></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="row1">
+<td class="profile" valign="top">
+<table align="center" cellspacing="4" width="150">
+<tr>
+<td><img alt="Не в сети" src="./styles/subsilver2-modded/imageset/ru/icon_user_offline.gif" title="Не в сети"/></td>
+</tr>
+<tr>
+<td class="postdetails">Content manager</td>
+</tr>
+<tr>
+<td><img alt="Content manager" src="images/ranks/visio_getbb_ru/ShapeSheet.png" title="Content manager"/></td>
+</tr>
+<tr>
+<td><img alt="Аватара пользователя" height="120" src="./images/avatars/upload/visio_getbb_ru/c142221d528ebb74568a4013d1829b09_61.png?1653574463" width="120"/></td>
+</tr>
+</table>
+<span class="postdetails">
+<br/><b>Зарегистрирован:</b> 02 окт 2009, 01:01<br/><b>Сообщений:</b> 5137<br/><b>Откуда:</b> оттуда						<br/><b>Должность:</b> Дизайнер по оформлению документации									</span>
+</td>
+<td valign="top">
+<table cellspacing="5" width="100%">
+<tr>
+<td>
+<div class="postbody"><!-- google_ad_section_start -->Встречайте новый BBCode (тег) <kbd style="display: inline-block; bold; font-size: 1em; padding: 0 0.4em; background: rgba(0, 0, 255, 0.07); border-radius: 0.5em; border: 1px solid rgba(0, 0, 0, 0.2); box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2);">offapp</kbd>!<hr title=""/><br/><span style="font-size: 150%; line-height: normal">Для чего это:</span><br/>На форуме в сообщениях иногда прикладывают файлы MS Word/Excel. Иногда в ветке таких сообщений много, раздражает необходимость скачивать файл Excel с двумя заполненными ячейками.<br/>И засорять этими документами свой компьютер. В последнее время я больше просматриваю форум с телефона или планшета, хочется их тоже не забивать одномоментно-актуальной информацией.  <img alt=":wall:" src="./images/smilies/../ranks/visio_getbb_ru/huh.gif" title="Balls to the wall"/> <br/>Назначение исключительно ради просмотра! В случае  Excel не будет возможностей типа сортировки и фильтрации...<br/><br/><span style="font-size: 150%; line-height: normal">С какими ссылками это работает:</span><br/>1. С файлами размещенными на данном форуме (для этого создавался собственно)<br/>2. С офисными документами размещенными на GitHub<br/>3. С файлами размещенными на сторонних сайтах, когда гиперссылка содержит расширение файла<br/><div style="background-color: #D0D0D0; -moz-border-radius: 5px; -webkit-border-radius: 5px; border: 3px solid #777; padding: 3px;"><strong>Дополнено позднее: </strong>4. С документами выложенными в социальной сети ВКонтакте [внезапно]</div><br/><br/>Не работает документах ссылками размещенными на OneDrive, Google Drive, Яндекс-диске и т.п.<br/><br/><span style="font-size: 150%; line-height: normal">Синтаксис:</span><br/><code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #2E8B57; display: inline;">[offapp]{URL документа MS Office}[/offapp]</code><br/><span style="font-weight: bold">Как получить ссылку на документ MS Office</span><br/><img alt="Изображение" src="https://user-images.githubusercontent.com/35092915/226566051-574864a8-6069-427a-b92f-dafda848b788.gif"/><br/>Навести указатель мыши на ссылку на внедренный документ/ или просто ссылку с указанием расширения документа, щелкнуть правой кнопкой мыши в в контекстном меню выбрать вариант "Копировать ссылку".<br/><br/><span style="font-size: 150%; line-height: normal">Пример:</span><br/>В нижеследующем примере используется ссылка на присоединенный документ: <code style="font-family: Monaco, 'Andale Mono', 'Courier New', Courier, monospace; font-size: 0.9em; font-style: normal; line-height: 1.3em; background: #FFF; border: 1px solid #C9D2D8; padding: 0 3px; color: #2E8B57; display: inline;">https://visio.getbb.ru/download/file.php?id=1883</code>.<br/><div class="quotetitle">BPM в сообщении <a class="postlink" href="viewtopic.php_p=18174.html#p18174">#18174</a> писал(а):</div><div class="quotecontent">который выше - ее уже нет. Это же сразу видно. Группирвка: Данные \ Группировать (предварительно выделив строки).<br/><span style="font-weight: bold"><span style="color: red">Содержимое спрятано под спойлер ↓</span></span><div style="padding: 3px; background-color: #FFFFFF; border: 1px solid #d8d8d8; font-size: 1em;"><div style="text-transform: uppercase; border-bottom: 1px solid #CCCCCC; margin-bottom: 3px; font-size: 0.8em; font-weight: bold; display: block;"><span onclick="if (this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display != '') {  this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = ''; this.innerHTML = '<b>Спойлер: </b><a href=\'#\' onClick=\'return false;\'>▲</a>'; } else { this.parentNode.parentNode.getElementsByTagName('div')[1].getElementsByTagName('div')[0].style.display = 'none'; this.innerHTML = '<b>Спойлер: </b><a href=\'#\' onClick=\'return false;\'>▼</a>'; }"></span><b>Спойлер: </b><a href="#" onclick="return false;">▼</a></div><div class="quotecontent"><div style="display: none;"><iframe frameborder="0" height="720" scrolling="yes" src="https://view.officeapps.live.com/op/view.aspx?src=https://visio.getbb.ru/download/file.php?id=1883&amp;wdOrigin=BROWSELINK" style="resize: vertical" title="Встроенный документ" width="100%"></iframe></div></div></div>Там где была группировка - прилагаю, но изначально группировка была намного сложнее, после того как в пятый раз слетела - добавлял только "чтобы обозначить" - для тестирования.</div><br/><span style="font-weight: bold">Примечание</span>: По умолчанию у этого тега нет заворачивания под спойлер, т.к. там высота 720 пикселей. У меня психологический барьер более 800…<br/><div style="background-color: #D0D0D0; -moz-border-radius: 5px; -webkit-border-radius: 5px; border: 3px solid #777; padding: 3px;"><strong>Дополнено позднее: </strong><span style="font-weight: bold">05.06.2024</span> Про документы из VK<div class="quotetitle"><b>Цитата:</b></div><div class="quotecontent">4. С документами выложенными в социальной сети ВКонтакте [внезапно]</div>Как оказалось работает даже с онлайн-документами опубликованными в VK (реализован просмотр через web-приложение МойОфис). <br/><a class="postlink" href="https://vk.com/doc158031700_673611927?hash=WQu8X911k6zYCZS0qsRkq2P11CYXRCDwZwT5wFz0oYo" target="_blank">Пример таблицы</a><br/>Главное получить ссылку на файл. Для этого необходимо открыть страницу в режиме разработчика нажав клавишу <kbd style="display: inline-block; bold; font-size: 1em; padding: 0 0.4em; background: rgba(0, 0, 255, 0.07); border-radius: 0.5em; border: 1px solid rgba(0, 0, 0, 0.2); box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2);">F12</kbd><br/>1. В нижней части открывшегося окна выбираем вкладку <span style="font-weight: bold">html</span><br/>2. Разворачиваем блок <span style="font-weight: bold">docs_iframe_container</span><br/>3. Разворачиваем блок <span style="font-weight: bold">form action</span><br/>4. Смотрим в параметр <span style="font-weight: bold">value</span> в тэге <span style="font-weight: bold">input name</span><br/><figure class="wp-block-image size-large"><img loading="lazy" max-width:="" src="https://i.imgur.com/5h4UpWt.png"/></figure><br/><span style="color: red">Главная проблема с документами, которые хранятся в Яндекс.Диске и прочих VK, ссылки на документ периодически изменяются!!!</span></div><!-- google_ad_section_end --></div>
+<br clear="all"/><br/>
+<table cellspacing="0" width="100%">
+<tr valign="middle">
+<td align="right" class="gensmall">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr class="row1">
+<td class="profile"><strong><a href="#wrapheader">Вернуться к началу</a></strong></td>
+<td><div class="gensmall" style="float: left;"> <a href="./memberlist.php?mode=viewprofile&amp;u=61"><img alt="Профиль" src="./styles/subsilver2-modded/imageset/ru/icon_user_profile.gif" title="Профиль"/></a>  </div> <div class="gensmall" style="float: right;"><a href="./posting.php?mode=quote&amp;f=29&amp;p=18176"><img alt="Ответить с цитатой" src="./styles/subsilver2-modded/imageset/ru/icon_post_quote.gif" title="Ответить с цитатой"/></a>  </div></td>
+</tr>
+<tr>
+<td class="spacer" colspan="2" height="1"><img alt="" height="1" src="images/spacer.gif" width="1"/></td>
+</tr>
+</table>
+<table cellspacing="1" class="tablebg" width="100%">
+<tr align="center">
+<td class="cat"><form action="./viewtopic.php?f=29&amp;t=236" method="post" name="viewtopic"><span class="gensmall">Показать сообщения за:</span> <select name="st"><option selected="selected" value="0">Все сообщения</option><option value="1">1 день</option><option value="7">7 дней</option><option value="14">2 недели</option><option value="30">1 месяц</option><option value="90">3 месяца</option><option value="180">6 месяцев</option><option value="365">1 год</option></select> <span class="gensmall">Поле сортировки</span> <select name="sk"><option value="a">Автор</option><option selected="selected" value="t">Время размещения</option><option value="s">Заголовок</option></select> <select name="sd"><option selected="selected" value="a">по возрастанию</option><option value="d">по убыванию</option></select> <input class="btnlite" name="sort" type="submit" value="Перейти"/></form></td>
+</tr>
+</table>
+<table cellspacing="1" width="100%">
+<tr>
+<td align="left" nowrap="nowrap" valign="middle">
+<a href="./posting.php?mode=post&amp;f=29"><img alt="Начать новую тему" src="./styles/subsilver2-modded/imageset/ru/button_topic_new.gif" title="Начать новую тему"/></a> <a href="./posting.php?mode=reply&amp;f=29&amp;t=236"><img alt="Ответить на тему" src="./styles/subsilver2-modded/imageset/ru/button_topic_reply.gif" title="Ответить на тему"/></a> </td>
+<td class="nav" nowrap="nowrap" valign="middle"> Страница <strong>1</strong> из <strong>1</strong><br/></td>
+<td class="gensmall" nowrap="nowrap"> [ Сообщений: 7 ] </td>
+<td align="right" class="gensmall" nowrap="nowrap" width="100%"></td>
+</tr>
+</table>
+</div>
+<div id="pagefooter"></div>
+<br clear="all"/>
+<table cellpadding="0" cellspacing="1" class="tablebg" style="margin-top: 5px;" width="100%">
+<tr>
+<td class="row1">
+<p class="breadcrumbs"><a href="./portal.php">Портал</a> » <a href="index.php.html">Список форумов</a> » <a href="viewforum.php_f=1.html">Форум пользователей</a> » <a href="viewforum.php_f=29.html">Общие вопросы</a></p>
+<p class="datetime">Часовой пояс: UTC + 3 часа [ Летнее время ]</p>
+</td>
+</tr>
+</table><br/>
+<!-- Yandex.RTB R-A-1239576-1 -->
+<div id="yandex_rtb_R-A-1239576-1" style="display: table;margin-right:auto;margin-left:auto;"></div>
+<script type="text/javascript">
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-A-1239576-1",
+                renderTo: "yandex_rtb_R-A-1239576-1",
+                async: true
+            });
+        });
+        t = d.getElementsByTagName("script")[0];
+        s = d.createElement("script");
+        s.type = "text/javascript";
+        s.src = "//an.yandex.ru/system/context.js";
+        s.async = true;
+        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+</script>
+<br clear="all"/>
+<table cellspacing="1" class="tablebg" width="100%">
+<tr>
+<td class="cat"><h4>Кто сейчас на конференции</h4></td>
+</tr>
+<tr>
+<td class="row1"><p class="gensmall">Сейчас этот форум просматривают: нет зарегистрированных пользователей и гости: 6</p></td>
+</tr>
+</table>
+<br clear="all"/>
+<table cellspacing="1" width="100%">
+<tr>
+<td align="left" nowrap="nowrap" valign="top" width="40%"></td>
+<td align="right" nowrap="nowrap" valign="top"><span class="gensmall">Вы <strong>можете</strong> начинать темы<br/>Вы <strong>можете</strong> отвечать на сообщения<br/>Вы <strong>не можете</strong> редактировать свои сообщения<br/>Вы <strong>не можете</strong> удалять свои сообщения<br/>Вы <strong>не можете</strong> добавлять вложения<br/></span></td>
+</tr>
+</table>
+<br clear="all"/>
+<table cellspacing="0" width="100%">
+<tr>
+<td><form action="./search.php?t=236" method="post" name="search"><span class="gensmall">Найти:</span> <input class="post" name="keywords" size="20" type="text"/> <input class="btnlite" type="submit" value="Перейти"/></form></td>
+<td align="right"> <form action="./viewforum.php" method="post" name="jumpbox" onsubmit="if(document.jumpbox.f.value == -1){return false;}">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td nowrap="nowrap"><span class="gensmall">Перейти:</span> <select name="f" onchange="if(this.options[this.selectedIndex].value != -1){ document.forms['jumpbox'].submit() }">
+<option value="-1">Выберите форум</option>
+<option value="-1">------------------</option> <option value="1">Форум пользователей</option>
+<option selected="selected" value="29">   Общие вопросы</option>
+<option value="24">      Полезные ссылки</option>
+<option value="3">   Трафареты и шаблоны</option>
+<option value="49">      Полезные ссылки</option>
+<option value="2">   Версии и варианты поставки Visio</option>
+<option value="28">      Публикации официального русскоязычного блога Visio</option>
+<option value="18">   Свободная трибуна</option>
+<option value="19">      Флейм</option>
+<option value="4">Форум разработчиков</option>
+<option value="6">   Программирование</option>
+<option value="22">      Полезные ссылки</option>
+<option value="5">   ShapeSheet</option>
+<option value="21">      Полезные ссылки</option>
+<option value="15">   Склад полезных макросов</option>
+<option value="30">Работы участников форума</option>
+<option value="32">Работа</option>
+<option value="33">   Исполнители</option>
+<option value="34">   Заказы</option>
+<option value="7">О форуме</option>
+<option value="10">   Предложения и обсуждения</option>
+<option value="9">   Объявления и указания</option>
+<option value="25">Коллективная работа</option>
+<option value="44">   АСУТП</option>
+<option value="42">   Инженерные системы</option>
+<option value="26">   Схема электрощита</option>
+<option value="50">   Надстройка "Хранилище макросов"</option>
+<option value="52">   Комплект проектной/рабочей документации</option>
+<option value="38">База знаний</option>
+<option value="39">   Документация</option>
+<option value="40">   Типичные проблемы</option>
+<option value="41">   Установка и настройка</option>
+<option value="53">VisioPort</option>
+<option value="54">   Visio Navigator</option>
+<option value="55">   Прочее к VisioPort</option>
+<option value="56">   Перенесено из Gumroad</option>
+</select> <input class="btnlite" type="submit" value="Перейти"/></td>
+</tr>
+</table>
+</form>
+</td>
+</tr>
+</table>
+<img alt="cron" height="1" src="./cron.php?cron_type=tidy_cache" width="1"/></div>
+<!--
+	We request you retain the full copyright notice below including the link to www.phpbb.com.
+	This not only gives respect to the large amount of time given freely by the developers
+	but also helps build interest, traffic and use of phpBB3. If you (honestly) cannot retain
+	the full copyright we ask you at least leave in place the "Powered by phpBB" line, with
+	"phpBB" linked to www.phpbb.com. If you refuse to include even this then support on our
+	forums may be affected.
+
+	The phpBB Group : 2006
+//-->
+<div id="wrapfooter">
+<span class="copyright">Powered by <a href="http://www.phpbb.com/">phpBB</a> © 2000, 2002, 2005, 2007 phpBB Group
+	<br/>Вы можете <a href="http://getbb.ru/">создать форум бесплатно</a> PHPBB3 на Getbb.Ru, Также возможно <a href="http://mybb2.ru/">сделать готовый форум</a> PHPBB2 на Mybb2.ru <br/><a href="http://www.phpbbguru.net/">Русская поддержка phpBB</a></span>
+</div>
+<!--LiveInternet counter--><script type="text/javascript"><!--
+new Image().src = "http://counter.yadro.ru/hit;getbb?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random();//--></script><!--/LiveInternet--></body>
+</html>
